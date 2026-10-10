@@ -13,11 +13,11 @@ const ollama = createOpenAICompatible({
 
 export default {
   tests: ['tests/**/*.e2e.ts', ...skipped().map((file) => `!${file}`)],
-  // `markdown` writes `.e2e/summary.md`; every test keeps a `trace.md` and a
-  // video under `.e2e/results/`, so a passing run can be watched afterwards.
+  // `markdown` writes `.e2e/summary.md`, and every test keeps a `trace.md`
+  // under `.e2e/results/`: each step, each action the agent took, the screen
+  // it judged.
   reporters: ['list', 'markdown', varianceReporter()],
   trace: 'on',
-  video: 'on',
   // A local model answers slower than a hosted one, and slower again when
   // every worker asks it at once.
   timeout: 300_000,

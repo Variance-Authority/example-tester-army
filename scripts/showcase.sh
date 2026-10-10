@@ -30,15 +30,10 @@ npx variance covering --since HEAD >"$out/covering-since.txt"
 npx e2e run >/dev/null 2>&1
 cp .e2e/summary.md "$out/selected-run.md"
 
-# 4. The agent removing a note: its trace page, its judgment's screenshot, and
-# its video with the frames where nothing moved taken out.
+# 4. The agent removing a note: its trace page and its judgment's screenshot.
 dir=$(ls -d .e2e/results/notes-agent-the-agent-removes-a-note-*)
 cp "$dir/attempt-1/screenshots/001-assert.png" "$out/remove-a-note.png"
 sed -e 's#\[screenshot\](attempt-1/screenshots/001-assert.png)#[screenshot](remove-a-note.png)#' \
-  -e 's#\[video\](attempt-1/video/video.webm)#[video](remove-a-note.gif)#' \
   "$dir/trace.md" >"$out/remove-a-note.md"
-"$(node -p "require('ffmpeg-static')")" -loglevel error -y -i "$dir/attempt-1/video/video.webm" \
-  -vf 'mpdecimate,setpts=N/FRAME_RATE/TB,fps=8,scale=640:-1:flags=lanczos,split[a][b];[a]palettegen[p];[b][p]paletteuse' \
-  "$out/remove-a-note.gif"
 
 echo "showcase: wrote $out/"
