@@ -17,11 +17,11 @@ export default {
   // A local model answers slower than a hosted one, and slower again when
   // every worker asks it at once.
   timeout: 300_000,
-  actionTimeout: 120_000,
   agents: {
     default: {
       model: ollama.chatModel(process.env.E2E_MODEL ?? 'qwen3:30b-a3b'),
       system: 'You are a thorough QA agent. Verify every outcome.',
+      judgmentTimeout: 120_000,
     },
   },
   targets: [
