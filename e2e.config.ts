@@ -11,7 +11,7 @@ const ollama = createOpenAICompatible({
 });
 
 export default {
-  reporters: ['list', 'json', varianceReporter()],
+  reporters: ['list', varianceReporter()],
   agents: {
     default: {
       model: ollama.chatModel(process.env.E2E_MODEL ?? 'qwen3:30b-a3b'),
