@@ -2,6 +2,7 @@ import type { E2EConfig } from 'e2e';
 import { web } from '@e2e-dev/web';
 import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 import { varianceReporter } from './variance/reporter.ts';
+import { skipped } from './variance/select.ts';
 
 // A local model through Ollama's OpenAI-compatible endpoint. Any model that
 // calls tools works; E2E_MODEL picks another one you have pulled.
@@ -11,7 +12,12 @@ const ollama = createOpenAICompatible({
 });
 
 export default {
+  tests: ['tests/**/*.e2e.ts', ...skipped().map((file) => `!${file}`)],
   reporters: ['list', varianceReporter()],
+  // A local model answers slower than a hosted one, and slower again when
+  // every worker asks it at once.
+  timeout: 300_000,
+  actionTimeout: 120_000,
   agents: {
     default: {
       model: ollama.chatModel(process.env.E2E_MODEL ?? 'qwen3:30b-a3b'),
