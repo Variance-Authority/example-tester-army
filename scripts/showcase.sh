@@ -5,7 +5,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-if [ -n "$(git status --porcelain)" ]; then
+if [ -n "$(git status --porcelain -- . ':!reports')" ]; then
   echo "showcase: commit or stash first; an uncommitted precondition runs the whole suite" >&2
   exit 1
 fi
