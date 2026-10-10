@@ -1,4 +1,4 @@
-# Tester Army e2e with coverage-based test selection
+# TesterArmy e2e with coverage-based test selection
 
 This is [tester-army/e2e](https://github.com/tester-army/e2e)'s `with-vite`
 example, run on a local model through Ollama and narrowed by
