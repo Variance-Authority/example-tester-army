@@ -37,7 +37,7 @@ cp "$dir/attempt-1/screenshots/001-assert.png" "$out/remove-a-note.png"
 sed -e 's#\[screenshot\](attempt-1/screenshots/001-assert.png)#[screenshot](remove-a-note.png)#' \
   -e 's#\[video\](attempt-1/video/video.webm)#[video](remove-a-note.gif)#' \
   "$dir/trace.md" >"$out/remove-a-note.md"
-ffmpeg -loglevel error -y -i "$dir/attempt-1/video/video.webm" \
+"$(node -p "require('ffmpeg-static')")" -loglevel error -y -i "$dir/attempt-1/video/video.webm" \
   -vf 'mpdecimate,setpts=N/FRAME_RATE/TB,fps=8,scale=640:-1:flags=lanczos,split[a][b];[a]palettegen[p];[b][p]paletteuse' \
   "$out/remove-a-note.gif"
 
