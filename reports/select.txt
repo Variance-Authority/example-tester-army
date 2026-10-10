@@ -1,0 +1,7 @@
+skipping 5 of 6 test files recorded whole: none covered a changed line; every other test file runs.
+read src/features/Notes.tsx: bodies — the changed regions are charged, not the whole module
+tests/counter.agent.e2e.ts
+tests/counter.e2e.ts
+tests/greeting.agent.e2e.ts
+tests/greeting.e2e.ts
+tests/notes.e2e.ts

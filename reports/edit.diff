@@ -1,0 +1,13 @@
+diff --git a/src/features/Notes.tsx b/src/features/Notes.tsx
+index 69d2f23..6d694e1 100644
+--- a/src/features/Notes.tsx
++++ b/src/features/Notes.tsx
+@@ -13,7 +13,7 @@ export function Notes() {
+   }
+ 
+   function remove(index: number) {
+-    setNotes(notes.filter((_, at) => at !== index));
++    setNotes((current) => current.filter((_, at) => at !== index));
+   }
+ 
+   return (

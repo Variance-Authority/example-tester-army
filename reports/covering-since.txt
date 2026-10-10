@@ -1,0 +1,14 @@
+1 changed file since HEAD, 4 changed regions: 1 nothing covered, 2 covered by one case.
+Read from node_modules/.cache/variance-authority/test-selection/89fd92a3696c80e9cd0d9f2fd05d68ac/coverage.bin.cases.bin, recorded at 5e7e7ac613186661bc7d600baf098511c1f446a1.
+
+src/features/Notes.tsx
+  1-57 module — no case covered this region, and every case that could have reached it finished (also ran while the module evaluated; no file graph this reading held names who loaded it)
+  3-57 function Notes — 4 cases
+    tests/notes.agent.e2e.ts > the agent keeps a note
+    tests/notes.agent.e2e.ts > the agent removes a note
+    tests/notes.e2e.ts > adds a note
+    tests/notes.e2e.ts > starts with no notes
+  15-17 function Notes/remove — 1 case, and it is the only witness
+    tests/notes.agent.e2e.ts > the agent removes a note
+  16-16 function Notes/remove/filter.arg0 — 1 case, and it is the only witness
+    tests/notes.agent.e2e.ts > the agent removes a note

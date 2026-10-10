@@ -1,0 +1,57 @@
+src/features/Notes.tsx — 15 recorded ranges, 12 named tests
+lines 1-2 — loaded
+  no named test covered this range, and every case that could have reached it finished: unwalked.
+lines 3-6 — walked
+  tests/notes.agent.e2e.ts
+    the agent keeps a note
+    the agent removes a note
+  tests/notes.e2e.ts
+    adds a note
+    starts with no notes
+lines 7-9 — walked
+  tests/notes.agent.e2e.ts
+    the agent keeps a note
+    the agent removes a note
+  tests/notes.e2e.ts
+    adds a note
+line 10 — unwalked
+lines 11-13 — walked
+  the same 3 named tests as lines 7-9
+line 14 — walked
+  the same 4 named tests as lines 3-6
+lines 15-17 — alone
+  tests/notes.agent.e2e.ts
+    the agent removes a note
+lines 18-33 — walked
+  the same 4 named tests as lines 3-6
+line 34 — walked
+  the same 3 named tests as lines 7-9
+lines 35-44 — walked
+  the same 4 named tests as lines 3-6
+lines 45-47 — walked
+  the same 3 named tests as lines 7-9
+line 48 — alone
+  the same named test as lines 15-17
+lines 49-51 — walked
+  the same 3 named tests as lines 7-9
+lines 52-56 — walked
+  the same 4 named tests as lines 3-6
+line 57 — walked
+  tests/counter.agent.e2e.ts
+    the agent counts to the limit
+  tests/counter.e2e.ts
+    counts up by one
+    resets to zero
+  tests/greeting.agent.e2e.ts
+    the agent finds the empty-name error
+    the agent gets a greeting
+  tests/greeting.e2e.ts
+    asks for a name when the field is empty
+    greets the name you type
+    shows the greeting form
+  tests/notes.agent.e2e.ts
+    the agent keeps a note
+    the agent removes a note
+  tests/notes.e2e.ts
+    adds a note
+    starts with no notes
