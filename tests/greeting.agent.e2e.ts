@@ -1,4 +1,4 @@
-import { test } from '@e2e-dev/web';
+import { test } from '../variance/test.ts';
 import { expect } from 'e2e';
 
 test('the agent gets a greeting', async ({ app, agent, screen }) => {

@@ -1,6 +1,7 @@
 import type { E2EConfig } from 'e2e';
 import { web } from '@e2e-dev/web';
 import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
+import { varianceReporter } from './variance/reporter.ts';
 
 // A local model through Ollama's OpenAI-compatible endpoint. Any model that
 // calls tools works; E2E_MODEL picks another one you have pulled.
@@ -10,6 +11,7 @@ const ollama = createOpenAICompatible({
 });
 
 export default {
+  reporters: ['list', 'json', varianceReporter()],
   agents: {
     default: {
       model: ollama.chatModel(process.env.E2E_MODEL ?? 'qwen3:30b-a3b'),
