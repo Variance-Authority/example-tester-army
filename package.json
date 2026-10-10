@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "test:e2e": "e2e run"
+    "test:e2e": "e2e run",
+    "test:e2e:headed": "e2e run --headed"
   },
   "dependencies": {
     "@fontsource/dm-mono": "^5.3.0",
@@ -16,19 +17,19 @@
     "react-dom": "^19.3.0"
   },
   "devDependencies": {
+    "@ai-sdk/openai-compatible": "*",
     "@e2e-dev/web": "0.14.0",
     "@types/node": "^26.6.4",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.4",
+    "@variance-authority/cli": "^0.14.0",
+    "@variance-authority/sense": "^0.14.0",
     "@vitejs/plugin-react": "^6.1.1",
+    "ai": "^7.0.0",
     "e2e": "0.19.0",
     "playwright": "1.63.0",
     "typescript": "^7.0.2",
     "vite": "^8.3.2",
-    "zod": "^4.1.8",
-    "@ai-sdk/openai-compatible": "*",
-    "ai": "^7.0.0",
-    "@variance-authority/sense": "^0.14.0",
-    "@variance-authority/cli": "^0.14.0"
+    "zod": "^4.1.8"
   }
 }
