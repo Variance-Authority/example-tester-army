@@ -22,7 +22,6 @@ because the code the browser runs is unchanged.
 ```bash
 ollama pull qwen3:30b-a3b
 npm install
-npx playwright install chromium
 npm run test:e2e
 ```
 
