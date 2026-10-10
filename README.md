@@ -43,3 +43,11 @@ runs the whole suite.
 
 `e2e.config.ts`, `vite.config.ts` and `variance/test.ts` are preconditions of
 every spec file, so an edit to one of them runs the whole suite.
+
+`variance/test.ts` reads the running attempt from e2e's internal
+`Symbol.for('e2e.attempt.v1')`, the only place a fixture can learn which test it
+belongs to. That is why `e2e` and `@e2e-dev/web` are pinned exactly.
+
+## License
+
+Apache-2.0, as the e2e example it starts from. See `NOTICE`.

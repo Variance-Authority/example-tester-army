@@ -1,0 +1,13 @@
+example-tester-army
+Copyright 2026 Machine Garden
+
+Derived from the with-vite example of e2e (https://github.com/tester-army/e2e,
+commit 163257bd6a7cce092695725b7d6a485c93586098), licensed under the Apache
+License, Version 2.0. The app is split into routed features, and the tests,
+configuration and the variance/ directory are added or changed.
+
+e2e
+Copyright 2026 TesterArmy, Inc.
+
+This product includes software developed at TesterArmy, Inc.
+(https://tester.army).
