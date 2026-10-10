@@ -1,10 +1,7 @@
 import { test } from '@e2e-dev/web';
 import { expect } from 'e2e';
 
-// Agent steps call the model in e2e.config.ts.
-const skip = false;
-
-test('the agent gets a greeting', { skip }, async ({ app, agent, screen }) => {
+test('the agent gets a greeting', async ({ app, agent, screen }) => {
   await app.open('/');
 
   // The agent works out which field and button to use.
@@ -15,7 +12,7 @@ test('the agent gets a greeting', { skip }, async ({ app, agent, screen }) => {
   await agent.assert('the app greets Grace by name');
 });
 
-test('the agent finds the empty-name error', { skip }, async ({ app, agent, screen }) => {
+test('the agent finds the empty-name error', async ({ app, agent, screen }) => {
   await app.open('/');
 
   await agent.act('press Greet without typing a name');
